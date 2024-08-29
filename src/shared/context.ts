@@ -1,19 +1,25 @@
 import { inferAsyncReturnType } from "@trpc/server";
 import { BrowserWindow } from "electron";
-import {store} from "./storage";
+import { store } from "./storage";
+import { google } from "googleapis";
+import Env from "@env";
 
-// attach variables and other state you plan on making
-// accessible in your procedures
 export async function createContext() {
-  // the currently focused BrowserWindow instance
   const browserWindow = BrowserWindow.getFocusedWindow();
 
+  const gAuthClient = new google.auth.OAuth2
+    (Env.GOOGLE_CLIENT_ID, Env.GOOGLE_CLIENT_SECRET, Env.REDIRECT_URL)
+
+
+  google.options({
+    auth: gAuthClient
+  })
+
   return {
-    // exposed under window alias
     window: browserWindow,
     store,
+    gAuthClient
   };
 }
 
-// this type is attached to initTRPC in trpc.ts
 export type Context = inferAsyncReturnType<typeof createContext>;

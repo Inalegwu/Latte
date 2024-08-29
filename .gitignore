@@ -6,3 +6,8 @@ node_modules
 out
 *.vite.config.*.mjs
 *.gen.ts
+.env
+.env.development
+.env.staging
+.env.production
+.env.*
