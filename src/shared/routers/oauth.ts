@@ -3,8 +3,6 @@ import { publicProcedure, router } from "@src/trpc";
 import { TRPCError } from "@trpc/server";
 import { BrowserWindow } from "electron";
 
-
-
 const oauthRouter = router({
 	attemptGoogleOAuth: publicProcedure.mutation(async ({ ctx }) => {
 		const authWindow = new BrowserWindow({

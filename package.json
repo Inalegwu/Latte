@@ -33,6 +33,7 @@
     "electron-trpc": "^0.5.2",
     "envalid": "^8.0.0",
     "googleapis": "^143.0.0",
+    "neverthrow": "^7.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
