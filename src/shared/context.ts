@@ -18,7 +18,7 @@ export async function createContext() {
   return {
     window: browserWindow,
     store,
-    gAuthClient
+    google: gAuthClient
   };
 }
 

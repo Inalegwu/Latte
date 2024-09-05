@@ -18,7 +18,7 @@
       "@env":["./env.ts"]
     }
   },
-  "include": ["src", "src/web/kuma.config.ts"],
+  "include": ["src"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

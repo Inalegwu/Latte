@@ -1,14 +1,14 @@
 {
-  "name": "electrostatic",
-  "description": "Starter Template for electron apps with trpc , drizzle-orm and sqlite",
+  "name": "Latte",
+  "description": "Finally be productive with emails",
   "version": "0.0.1",
   "author": {
-    "email": "youremail@provider.com",
-    "name": "your_name"
+    "email": "disgruntleddev@outlook.com",
+    "name": "Ikwue Inalegwu"
   },
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Inalegwu/ElectroStatic.git"
+    "url": "https://github.com/Inalegwu/Latte.git"
   },
   "main": "out/main/main.js",
   "scripts": {
@@ -16,8 +16,6 @@
     "dev": "electron-vite dev -w",
     "prebuild": "electron-vite build",
     "build": "pnpm tsx build.ts",
-    "db:generate": "drizzle-kit generate:sqlite",
-    "db:push": "drizzle-kit push:sqlite",
     "postinstall": "electron-rebuild"
   },
   "dependencies": {
@@ -30,6 +28,7 @@
     "@trpc/client": "^10.45.2",
     "@trpc/react-query": "^10.45.2",
     "@trpc/server": "^10.45.2",
+    "dotenv": "^16.4.5",
     "electron-trpc": "^0.5.2",
     "envalid": "^8.0.0",
     "googleapis": "^143.0.0",

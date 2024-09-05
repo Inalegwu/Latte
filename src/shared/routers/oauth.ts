@@ -11,13 +11,12 @@ const oauthRouter = router({
 			}
 		});
 
-		const authUrl = ctx.gAuthClient.generateAuthUrl({
+		const authUrl = ctx.google.generateAuthUrl({
 			access_type: "offline",
 			scope: ["https://googleapis.com/auth/gmail"]
 		})
 
 		authWindow.loadURL(authUrl);
-
 
 		const { session: { webRequest } } = authWindow.webContents
 
@@ -38,13 +37,12 @@ const oauthRouter = router({
 				})
 			}
 
-			const { tokens } = await ctx.gAuthClient.getToken(code);
+			const { tokens } = await ctx.google.getToken(code);
 
-			ctx.gAuthClient.setCredentials(tokens);
-
+			ctx.google.setCredentials(tokens);
 		})
-
 	}),
+	attemptOutlookOAuth: publicProcedure.mutation(async ({ ctx }) => {})
 })
 
 

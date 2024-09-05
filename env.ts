@@ -1,4 +1,9 @@
 import { cleanEnv, str, url } from "envalid";
+import { config } from "dotenv";
+
+config({
+	path: ".env",
+});
 
 const Env = cleanEnv(process.env, {
 	GOOGLE_CLIENT_ID: str({ desc: "Google OAuth Client ID" }),

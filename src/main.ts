@@ -8,14 +8,15 @@ app.setName("Latte");
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    frame: false,
     show: false,
+    frame: false,
     width: 500,
     height: 500,
-    maxWidth: 500,
     maxHeight: 500,
-    minWidth: 500,
+    maxWidth: 500,
     minHeight: 500,
+    minWidth: 500,
+    resizable: false,
     webPreferences: {
       sandbox: false,
       preload: join(__dirname, "../preload/preload.js"),
